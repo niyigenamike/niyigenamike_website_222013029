@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>Home</title>
+<style>
+  body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    margin: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+  a:hover {
+    color: #666;
+  }
+  #slideshow-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  #slideshow {
+    display: flex;
+    width: 300%;
+    transition: transform 1s ease-in-out;
+  }
+  .slide {
+    flex: 1;
+    min-width: 100%;
+    display: none; /* Hide slides by default */
+  }
+  #welcome,
+  #about,
+  #courses,
+  #facilities,
+  #contact {
+    margin-bottom: 40px;
+    padding: 20px; /* Add padding for better readability */
+    background-color: #fff; /* White background for sections */
+    border-radius: 10px; /* Rounded corners for sections */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for sections */
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px; /* Rounded corners for gallery images */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  }
+  .gallery img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  #footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <div id="header">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="students.html">Students</a>
+    <a href="ahool_administartion.html">School Administration System</a>
+    <hr>
+  </div>
+
+  <div id="slideshow-container">
+    <div id="slideshow">
+      <div class="slide">
+        <img src="images/image2.jpg" alt="Slide 1" width="800" height="400">
+      </div>
+      <div class="slide">
+        <img src="images/image3.jpg" alt="Slide 2" width="800" height="400">
+      </div>
+      <div class="slide">
+        <img src="images/image4.jpg" alt="Slide 3" width="800" height="400">
+      </div>
+    </div>
+  </div>
+
+  <div id="welcome">
+    <h2>Welcome to Green Academy Secondary School</h2>
+    <p>Welcome to Green Academy Secondary School, where learning meets excellence. Our school is dedicated to providing a nurturing environment where students can thrive academically, socially, and emotionally. With a focus on holistic education, we strive to inspire a passion for learning and encourage critical thinking skills.</p>
+  </div>
+
+  <div id="about">
+    <h2>About Us</h2>
+    <p>At Green Academy, we are committed to nurturing the intellectual, emotional, and social growth of our students. Our dedicated faculty members strive to create a supportive and inclusive learning environment where every student can reach their full potential. Through innovative teaching methods and personalized attention, we aim to cultivate lifelong learners and responsible citizens.</p>
+  </div>
+
+  <div id="courses">
+    <h2>Our Courses</h2>
+    <p>Our curriculum at Green Academy is designed to foster intellectual curiosity and academic excellence. We offer a diverse range of courses spanning various subjects, including mathematics, sciences, humanities, and the arts. Our experienced educators provide engaging and interactive lessons that challenge students to think critically and creatively.</p>
+  </div>
+
+  <div id="facilities">
+    <h2>Our Facilities</h2>
+    <p>Green Academy is equipped with state-of-the-art facilities to support the educational and extracurricular needs of our students. From well-equipped classrooms and laboratories to expansive sports fields and recreational areas, we provide a conducive environment for learning, exploration, and personal growth. Our commitment to excellence extends to every aspect of our school community.</p>
+  </div>
+
+  <div id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or would like to learn more about Green Academy Secondary School, please don't hesitate to contact us. Our friendly staff members are here to assist you and provide any information you may need. You can reach us by phone, email, or visit our campus in person. We look forward to hearing from you and welcoming you to our school community.</p>
+  </div>
+
+  <div class="gallery">
+    <img src="images/image5.jpg" alt="Gallery Image 1">
+    <img src="images/image4.jpg" alt="Gallery Image 2">
+    <img src="images/image3.jpg" alt="Gallery Image 3">
+  </div>
+
+  <div id="footer">
+    <p>&copy; 2024 Green Academy Secondary School. All rights reserved.</p>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.querySelectorAll('.slide');
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = 'block';
+      setTimeout(showSlides, 3000); // 
+    }
+  </script>
+</body>
+</html>
